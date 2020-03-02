@@ -1,0 +1,28 @@
+//***************************************
+//.cpp
+//Levi McCann
+//03/02/2020
+//Celsius-To-Fahrenheit Converter
+//Hendrickson
+//***************************************
+
+#include <iostream>
+#include <iomanip>
+#include <string>
+using namespace std;
+
+
+int main() {
+float C, F; //C for celsius F for Fahrenheit
+F =9.0/5.0*C+32; // calulation C to F
+cout <<"Enter the value of temperature in\n";
+cout <<"degrees celsius: ";
+cin>> C;
+    F =9.0/5.0*C+32;
+    //set precision to 2 decimals
+    cout<<setprecision(2) <<fixed;
+    cout<<"Temperature in farhenheit is  \n" <<F <<" . ";
+
+
+return 0;
+}
