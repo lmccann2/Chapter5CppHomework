@@ -1,0 +1,29 @@
+//****************************
+//.cpp
+//Levi McCann
+//03/02/2020
+//MembershipFees increase
+//CIS 41 Hendrickson
+//*****************************
+
+#include <iomanip>
+#include <string>
+#include <iostream>
+using namespace std;
+
+int main() {
+//initialize variables
+const float INCREASE = 0.04;
+const int YEARS = 6;
+float membership = 3000;
+
+//changing in loop
+for (int i =1; i <= YEARS; i++ )
+{
+  membership = membership +(membership * INCREASE);
+  //set decimal point precition 
+  cout <<setprecision(2) <<fixed;
+  cout<<"Year " <<i <<" fees are: $ " <<membership <<'\n'<<endl;;
+}
+return 0;
+}
