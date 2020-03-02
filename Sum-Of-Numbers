@@ -1,0 +1,39 @@
+//***************************************
+//.cpp
+//Levi McCann
+//03/02/2020
+//Sum of Numbers(5-1)
+//Hendrickson 
+//***************************************
+
+
+#include <iostream>
+using namespace std;
+
+int main() {
+  //initialize variables
+  int number = 0;
+  int sum = 0;
+
+
+  cout <<"Enter how many numbers to sum\n";
+  cin >> number;
+
+//Make sure number entered is positive
+  while (number < 0)
+  {
+    cout<<"Please enter a positive number ONLY.";
+    cin >> number;
+
+  }
+  //calculate total for sum of numbers
+  for (int i = 1; i <= number; i ++)
+  {
+    sum += i;
+
+  }
+  cout<<"Total sum is: " <<sum ;
+  
+  return 0;
+ 
+}
