@@ -1,0 +1,43 @@
+//****************************
+//.cpp
+//Levi McCann
+//03/02/2020
+//Pennies For Pay(5-6)
+//Hendrickson CIS61
+//****************************
+
+#include <iomanip>
+#include <string>
+#include <iostream>
+using namespace std;
+
+int main() {
+  int numDays =1;
+  double money = 1.0;
+
+  //Ask for user input
+cout <<"Enter number of days: \n";
+cin >> numDays;
+
+  //Make sure user enters a positive number
+  while (numDays < 1)
+  {
+
+    cout<<"Please enter a number greater than 0. ";
+    cin>>numDays;
+
+  }
+  for (int i = 1; i <= numDays; i++)
+  {
+   //Run loop to compund pennies
+   //set precision
+    cout <<setprecision(2) <<fixed ;
+    cout<<"Day " <<i <<" you earned $"  << money/100 <<". \n" ;
+    money*=2;
+    //money = money * 2;
+    
+  }
+
+
+return 0;
+}
