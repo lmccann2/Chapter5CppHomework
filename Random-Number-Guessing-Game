@@ -1,0 +1,56 @@
+//**********************************
+//.cpp
+//Levi McCann
+//Random Number Guessing Game
+//Hendrickson CIS 41
+//03/02/2020
+//**********************************
+
+
+
+#include <string>
+#include <iomanip>
+#include <cstdlib>
+#include <ctime>
+#include <iostream>
+using namespace std;
+
+
+int main() {
+  //initialize and declare variables
+  int randNum;
+  int useNum;
+  bool win = false;
+  //seed number of random number
+
+  unsigned seed = time(0);
+  //generate random number
+  srand(seed);
+  randNum = 1 + rand()%100;
+  //
+  cout <<"I am thinking of a number. Can you guess the number? (Between 1 - 100) "; 
+  cout <<endl;
+  cin>> useNum;
+  cout <<endl;
+
+  while (!win)
+    {
+      if (useNum < randNum) //too low
+      {
+        cout <<"Too Low. Try again. " <<endl;
+        cin>>useNum ;
+      }
+      else if (useNum > randNum) //too high
+      {
+        cout <<"Too High. Try again." <<endl;
+        cin>> useNum ;
+      }
+      else //winner
+      {
+        cout<<"You WIN! Good Job!" <<endl;
+        win = true;
+      }
+    }
+
+  return 0;
+}
